@@ -10,20 +10,6 @@ console.log(motAleatoire);
 
 //afficher le nombre de case/input en fonction du nombre de lettres choisies
 
-
-
-//clique sur les lettres - vérifie si dans le mot choisi
-
-//var btnLettre = document.querySelectorAll(".touche");
-console.log(btnLettre);
-
-btnLettre.addEventListener("click", enclencheUneLettre);
-
-function enclencheUneLettre () {
-    
-}
-
-
 // generation du clavier 
 
 var clavier = document.querySelector(".clavier");
@@ -34,6 +20,27 @@ for( char of "abcdefghijklmnopqrstuvwxyz" ){
                 clavier.innerHTML += "<div class='touche'>" + char + "</div>";
             
             }
+
+
+
+//clique sur les lettres - vérifie si dans le mot choisi
+
+var btnLettre = document.querySelectorAll(".touche");
+console.log(btnLettre);
+
+
+for (var i = 0; i < btnLettre.lenght; i++) {
+btnLettre[i].addEventListener("click", compareLettreMot);
+}
+
+function compareLettreMot() {
+    var lettrePresse = this.innerHtml;
+    for (var i = 0; i < motsAleatoires.lenght; i++)
+    if ( lettrePresse == motsAleatoire[i] ){
+        console.log(lettrePresse);
+        }
+}
+
 
 
 
