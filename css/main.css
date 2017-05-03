@@ -1,0 +1,122 @@
+body {
+background-image: url(../images/fond.png);
+background-size: cover;
+background-repeat: no-repeat;
+margin: 0;
+padding: 0;  
+width: 100vw;
+height: 100vh;
+overflow:hidden;
+font-family: Raleway, sans-serif;
+}
+
+
+section {
+    display:flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin:auto;
+    justify-content: space-between;
+    
+}
+
+
+h2 {
+    font-size: 80px;
+    letter-spacing: 12px;
+    text-align:center;
+    color: yellow;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    padding-left: 180px;
+    width: 100%;
+    
+}
+
+.zone-pendu {
+    display: flex;
+    width: 40%;
+    height: auto;
+    flex-direction: column;
+    align-content: center;
+   
+}
+.fond-chat{ 
+    height: 70%;
+}
+
+.tiret-lettre {
+    margin-top: 60px;
+    width:500px;
+    height: 10px;
+    background-color: yellow;
+    margin-left: 100px;
+}
+
+
+.bg-1 {
+background-image: url(../images/fond-potence.png); 
+
+
+}
+
+.bg-2 {
+background-image: url(../images/fond-potence-chat-bras-1.png);    
+}
+
+.bg-3 {
+background-image: url(../images/fond-potence-chat-bras-2.png);    
+}
+
+.bg-4 {
+background-image: url(../images/fond-potence-chat-pate-1.png);    
+}
+
+.bg-5 {
+background-image: url(../images/fond-potence-chat-pate-2.png);    
+}
+
+.bg-6 {
+background-image: url(../images/fond-potence-chat-corps.png);    
+}
+
+.bg-7 {
+ background-image: url(../images/fond-potence-chat.png);   
+}
+
+
+
+.zone-clavier {
+    display:flex;
+    flex-direction: column;
+    width: 40%;
+   
+}
+.rejouer {
+    border: solid 3px white;
+    color: white;
+    background-color: transparent;
+    width: 20%;
+    margin:auto;
+    padding: 8px;
+}
+
+.rejouer:hover {
+    cursor:pointer;
+    background-color: black;
+    border: solid 3px yellow;
+    color :yellow;
+    
+}
+
+.clavier {
+    background-color: white;
+    height: 400px;
+    margin-top: 85px; 
+}
+
+
+.lettre {
+    color:white;
+    background-color:black;
+}
