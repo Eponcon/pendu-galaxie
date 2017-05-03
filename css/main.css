@@ -99,6 +99,8 @@ background-image: url(../images/fond-potence-chat-corps.png);
     width: 20%;
     margin:auto;
     padding: 8px;
+  
+    
 }
 
 .rejouer:hover {
@@ -109,14 +111,62 @@ background-image: url(../images/fond-potence-chat-corps.png);
     
 }
 
-.clavier {
+.clavier  {
     background-color: white;
     height: 400px;
     margin-top: 85px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    
 }
 
 
-.lettre {
-    color:white;
-    background-color:black;
+
+.touche {
+    background-color: black;
+    color: white;
+    width: 15%;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;  
 }
+
+.touche:hover {
+    color: yellow;
+    cursor:pointer;
+    
+
+    
+    
+}
+
+
+
+
+
+/* Media queries*/
+
+
+@media screen and (min-width: 330px) and (max-width: 480px) and (orientation: landscape) {
+   
+    
+}
+
+@media screen and (min-width: 544px) and (max-width: 767px) and (orientation: landscape) {
+    
+}
+    
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+
+
+@media screen and (min-width: 993px) and (max-width: 1200px) and (orientation: landscape) {
+        
+    }
