@@ -1,6 +1,4 @@
-
-
-//liste de mot qui s'affiche aléatoirement
+//liste de mots qui s'affichent aléatoirement
 
 var tableauMot = ["etoile", "lune", "galaxie", "planete", "nebuleuse", "univers", "comete", "astre", "lactee", "cosmos"];
 console.log(tableauMot);
@@ -13,7 +11,6 @@ console.log(motAleatoire);
 // generation du clavier 
 
 var clavier = document.querySelector(".clavier");
-
 console.log(clavier);
 
 for( char of "abcdefghijklmnopqrstuvwxyz" ){
@@ -21,13 +18,7 @@ for( char of "abcdefghijklmnopqrstuvwxyz" ){
             }
 
 
-
-
-
-
-
 // générer des case input en fonction du nombre de lettre
-
 
 var lesInputs = document.querySelector("#input");
 for (var i=0; i<motAleatoire.length; i++){
@@ -35,62 +26,50 @@ for (var i=0; i<motAleatoire.length; i++){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//clique sur les lettres - vérifie si dans le mot choisi
+//écouteurs évenements : clique sur les lettres - vérifie si dans le mot choisi
 
 var btnLettre = document.querySelectorAll(".touche");
 console.log(btnLettre);
 
 
-for (var i = 0; i < btnLettre.lenght; i++) {
+for (var i = 0; i < btnLettre.length; i++) {
 btnLettre[i].addEventListener("click", compareLettreMot);
 }
 
+var inputLettre = document.querySelectorAll(".input-lettre");
+
+//la comparaison entre  la valeurbtnlettre et le mot aléatoire
+ 
 function compareLettreMot() {
-    var lettrePresse = this.innerHtml;
-    for (var i = 0; i < motsAleatoires.length; i++)
-    if ( lettrePresse == motsAleatoire[i] ){
-        console.log(lettrePresse);
+    var lettrePresse = this.innerHTML;
+    console.log(lettrePresse);
+    for (var i = 0; i < motAleatoire.length; i++){
+        
+        if ( lettrePresse == motAleatoire[i] ){
+        inputLettre[i].value = lettrePresse; 
+        
         }
+
+
+    }
+    
+    //reconsituer le mot avec les lettres dans le inputs
+    
+    
+    
+    for (var i = 0; i < inputLettre.lenght ; i++){
+        if (inputLettre[i] = motAleatoire)
+    
+    }
 }
 
-// quand on clique sur la lettre elle s'affiche au bon endroit
 
 
-/* bouton rejouer - retour au début
+
+
+
+
+/* bouton rejouer - retour au début du jeu
 var btnRejouer = document.querySelector(".rejouer");
 
 btnRejouer.addEventListener("click", EcranAccueil);
