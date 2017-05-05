@@ -8,7 +8,7 @@ console.log(tableauMot);
 var motAleatoire = tableauMot[Math.floor(Math.random()*tableauMot.length)];
 console.log(motAleatoire);
 
-//afficher le nombre de case/input en fonction du nombre de lettres choisies
+
 
 // generation du clavier 
 
@@ -18,8 +18,54 @@ console.log(clavier);
 
 for( char of "abcdefghijklmnopqrstuvwxyz" ){
                 clavier.innerHTML += "<div class='touche'>" + char + "</div>";
-            
             }
+
+
+
+
+
+
+
+// générer des case input en fonction du nombre de lettre
+
+
+var lesInputs = document.querySelector("#input");
+for (var i=0; i<motAleatoire.length; i++){
+    lesInputs.innerHTML += "<input class='input-lettre'>" + "" + "</input>";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -35,13 +81,13 @@ btnLettre[i].addEventListener("click", compareLettreMot);
 
 function compareLettreMot() {
     var lettrePresse = this.innerHtml;
-    for (var i = 0; i < motsAleatoires.lenght; i++)
+    for (var i = 0; i < motsAleatoires.length; i++)
     if ( lettrePresse == motsAleatoire[i] ){
         console.log(lettrePresse);
         }
 }
 
-
+// quand on clique sur la lettre elle s'affiche au bon endroit
 
 
 /* bouton rejouer - retour au début

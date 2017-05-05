@@ -45,12 +45,23 @@ h2 {
     height: 70%;
 }
 
-.tiret-lettre {
+#input {
     margin-top: 60px;
     width:500px;
-    height: 10px;
-    background-color: yellow;
-    margin-left: 100px;
+    height:80px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 8px; 
+}
+
+.input-lettre {
+    border-bottom-color: yellow;
+    width:30px;
+    height :50px;
+    font-size: 10px;
+    background-color: black;
 }
 
 
