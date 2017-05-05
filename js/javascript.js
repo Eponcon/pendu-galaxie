@@ -1,3 +1,5 @@
+var chat = document.querySelector(".fond-chat");
+
 //liste de mots qui s'affichent aléatoirement
 
 var tableauMot = ["etoile", "lune", "galaxie", "planete", "nebuleuse", "univers", "comete", "astre", "lactee", "cosmos"];
@@ -44,17 +46,19 @@ var nbCoups = 6;
  
 function compareLettreMot() {
     var lettrePresse = this.innerHTML;
+    var lettrePlace = false;
     console.log(lettrePresse);
     for (var i = 0; i < motAleatoire.length; i++){
         
         if ( lettrePresse == motAleatoire[i] ){
-        inputLettre[i].value = lettrePresse; 
+        inputLettre[i].value = lettrePresse; lettrePlace=true;
         }
     }
 
     //reconsituer le mot avec les lettres dans le inputs
     
     var motReconstitue = "";
+    
         for (var i = 0; i < inputLettre.length ; i++){
            motReconstitue += inputLettre[i].value;
        }
@@ -62,17 +66,26 @@ function compareLettreMot() {
         if( motReconstitue == motAleatoire){
             console.log("gagné");
         }
+       //dans le cas ou l'on perd
     
-        else {
-            if (coup > 6) {
-                console.log("perdu");      
-           }
-           else {
-                coup++;
+        else { 
+            
+                if(coup < nbCoups){
+                    if (lettrePlace==false){
+                        chat.classList.add('bg-'+(coup+1)); 
+                        if( coup > 1){
+                            chat.classList.remove('bg-'+(coup-1));
+                        }
+
+                    }
+                }
+        
+                else {
+                    console.log('perdu');
+                }
             }
-  
-       }
     
+             coup = coup+1;
     
    }
 
@@ -83,11 +96,9 @@ function compareLettreMot() {
 
 
 
-//bouton rejouer 
-var btnRejouer = document.querySelector(".rejouer");
 
-btnRejouer.addEventListener("click", EcranAccueil);
 
-function EcranAccueil (){
-    
-}
+
+
+
+

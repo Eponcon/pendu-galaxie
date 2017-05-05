@@ -35,7 +35,7 @@ h2 {
 
 .zone-pendu {
     display: flex;
-    width: 40%;
+    width: 54%;
     height: auto;
     flex-direction: column;
     align-content: center;
@@ -69,16 +69,14 @@ h2 {
 
 .bg-1 {
 background-image: url(../images/fond-potence.png); 
-
-
 }
 
 .bg-2 {
-background-image: url(../images/fond-potence-chat-bras-1.png);    
+background-image: url(../images/fond-potence-chat-corps.png);    
 }
 
 .bg-3 {
-background-image: url(../images/fond-potence-chat-bras-2.png);    
+background-image: url(../images/fond-potence-chat-pate-2.png);    
 }
 
 .bg-4 {
@@ -86,11 +84,11 @@ background-image: url(../images/fond-potence-chat-pate-1.png);
 }
 
 .bg-5 {
-background-image: url(../images/fond-potence-chat-pate-2.png);    
+background-image: url(../images/fond-potence-chat-bras-2.png);    
 }
 
 .bg-6 {
-background-image: url(../images/fond-potence-chat-corps.png);    
+background-image: url(../images/fond-potence-chat-bras-1.png);    
 }
 
 .bg-7 {
