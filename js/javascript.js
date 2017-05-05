@@ -37,6 +37,8 @@ btnLettre[i].addEventListener("click", compareLettreMot);
 }
 
 var inputLettre = document.querySelectorAll(".input-lettre");
+var coup = 0;
+var nbCoups = 6;
 
 //la comparaison entre  la valeurbtnlettre et le mot aléatoire
  
@@ -47,21 +49,32 @@ function compareLettreMot() {
         
         if ( lettrePresse == motAleatoire[i] ){
         inputLettre[i].value = lettrePresse; 
-        
         }
-
-
     }
-    
+
     //reconsituer le mot avec les lettres dans le inputs
     
+    var motReconstitue = "";
+        for (var i = 0; i < inputLettre.length ; i++){
+           motReconstitue += inputLettre[i].value;
+       }
+        
+        if( motReconstitue == motAleatoire){
+            console.log("gagné");
+        }
+    
+        else {
+            if (coup > 6) {
+                console.log("perdu");      
+           }
+           else {
+                coup++;
+            }
+  
+       }
     
     
-    for (var i = 0; i < inputLettre.lenght ; i++){
-        if (inputLettre[i] = motAleatoire)
-    
-    }
-}
+   }
 
 
 
@@ -69,11 +82,12 @@ function compareLettreMot() {
 
 
 
-/* bouton rejouer - retour au début du jeu
+
+//bouton rejouer 
 var btnRejouer = document.querySelector(".rejouer");
 
 btnRejouer.addEventListener("click", EcranAccueil);
 
 function EcranAccueil (){
     
-}*/
+}
